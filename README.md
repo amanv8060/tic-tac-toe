@@ -9,4 +9,7 @@ Output is presented in the following format
     -----------     -----------
      - | - | -       7 | 8 | 9 
  
+<Player's > Turn
+
+Enter A no b/w 1-9
 
