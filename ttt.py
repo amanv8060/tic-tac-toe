@@ -1,7 +1,7 @@
 #Made by
-#
 # Aman Verma
 # verma1090aman@gmail.com
+import random
 from os import system,name
 board=["-","-","-",
        "-","-","-",
@@ -9,7 +9,12 @@ board=["-","-","-",
 game_on =True
 win=None
 player="X"
-
+x=1
+def auto_play():
+    global x 
+    x= int(input("1 for single player , 2 for dual"))
+    if not(x==1 or x==2):
+        auto_play()
 def clear(): 
   
     # for windows 
@@ -67,18 +72,33 @@ def change_player():
     player = "X"
 
 def turn(player):
-    valid = False
-    pos=int(input("Enter postion 1 to 9 : "))
-    while not valid:
-        while pos not in [1, 2, 3, 4, 5, 6, 7,8,9]:
-            pos = int(input("Please enter position 1 to 9: "))
-        pos=pos-1
-        if board[pos] == "-":
-            valid = True
-        else:
-            print("Occupied, Enter again.")
+    if x==2 or (player=="X" and x==1):
+        valid = False
+        while not valid:
+            pos=int(input("Enter postion 1 to 9 : "))
+            while pos not in [1, 2, 3, 4, 5, 6, 7,8,9] :
+                pos = int(input("Please enter position 1 to 9: "))
+            pos-=1
+            if board[pos] == "-":
+                valid = True
+            else:
+                print("Occupied, Enter again.")
+
+    elif x==1 :
+        valid = False
+        while not valid:
+            pos=random.randrange(0,9)
+            while pos not in [1, 2, 3, 4, 5, 6, 7,8,9]:
+                pos = random.randrange(0,9)
+            if board[pos] == "-":
+                valid = True
+            else:
+                valid= False
+        print(pos)
+
     
     board[pos]=player
     board_disp()
 
+auto_play()
 play()

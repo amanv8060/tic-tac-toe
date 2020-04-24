@@ -1,0 +1,6 @@
+check version : git --version
+
+intialize git repositary : git init
+
+add all files to .git : git add .
+add all same extension file to .git : git add *.extensionname
