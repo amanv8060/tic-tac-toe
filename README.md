@@ -1,6 +1,8 @@
 # tic-tac-toe
 A Simple Tic-Tac-Toe Game written in Python
 
+Press 1 for single Player Mode , 2 for Multiplayer
+
 Output is presented in the following format
 
      - | - | -       1 | 2 | 3 
