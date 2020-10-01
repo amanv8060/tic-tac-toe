@@ -1,5 +1,5 @@
 # tic-tac-toe
-A Simple Tic-Tac-Toe Game written in Python
+A Simple Tic-Tac-Toe Game written in Python which could be improved by gui . File a issue if any unexpected behaviour is there
 
 Press 1 for single Player Mode , 2 for Multiplayer
 
